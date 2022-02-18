@@ -1,0 +1,19 @@
+$bg: aquamarine;
+
+.box {
+  background-color: $bg;
+  &_title {
+    color: red;
+  }
+  &_image {
+    max-width: 200px;
+  }
+  &_svg {
+      display: block;
+    fill: green;
+    background: whitesmoke;
+    &:hover{
+        fill: gold;
+    }
+  }
+}
