@@ -14,26 +14,24 @@ html {
 body {
   font-size: 1.6rem;
   font-family: $font-jost;
+  color: $green;
 }
 
 .header {
   max-width: 1440px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto 4.7rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 4rem;
+  padding: 4rem 15px 0 15px;
   &__nav {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding-left: 0;
     gap: 4.8rem;
+    margin-right: 24.5rem;
   }
   &__link {
-    font-size: 1.6rem;
     color: $green;
     text-decoration: none;
     &:hover {
@@ -41,18 +39,19 @@ body {
     }
   }
   &__tel {
-    font-size: 1.6rem;
     color: $green;
+    font-size: 1.8rem;
     font-weight: 500;
     text-decoration: none;
+    padding-right: 8.2rem;
     &:hover {
       color: $orange;
     }
   }
   &__cart {
     display: block;
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     background-color: $orange;
     background-image: url(../images/Cart.svg);
@@ -70,7 +69,7 @@ body {
     font-size: 0.8rem;
     color: $white;
     position: absolute;
-    right: 1rem;
+    right: 0.6rem;
     top: 0.6rem;
   }
 }
@@ -78,7 +77,309 @@ body {
   display: block;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 12.3rem;
+  background-size: contain;
+  width: 12rem;
   height: 3.2rem;
+  margin-right: 11.9rem;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.main {
+  background-image: url(../images/main.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: 187px;
+  z-index: 0;
+  &__item {
+    margin-left: 12rem;
+    max-width: 378px;
+    margin-top: 6.1rem;
+  }
+  &__link {
+    margin-top: 5.4rem;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  &__cover {
+    flex-basis: 1020px;
+    height: 758px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__line {
+    width: 656px;
+    height: 656px;
+    border: 1px solid rgba($green, 0.4);
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: 93%;
+  }
+  &__text {
+    padding-top: 19.1rem;
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    color: $green;
+    text-align: left;
+    &:hover {
+      &::before {
+        background-color: $orange;
+        box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+      }
+    }
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+      border-radius: 100%;
+      background-color: $green;
+      position: absolute;
+    }
+    &_1 {
+      top: 47px;
+      left: 64px;
+      &::before {
+        top: 22px;
+        left: 85px;
+      }
+    }
+    &_2 {
+      top: 195px;
+      right: 2px;
+      &::before {
+        top: 17px;
+        left: -26px;
+      }
+    }
+    &_3 {
+      bottom: -52px;
+      right: 243px;
+      &::before {
+        top: -24px;
+        left: 13px;
+      }
+    }
+  }
+  &__food {
+    display: block;
+    color: rgba($green, 0.8);
+    margin-bottom: 6px;
+  }
+  &__tomato {
+    position: absolute;
+    bottom: 113px;
+    right: 120px;
+    width: 11rem;
+    z-index: -1;
+  }
+  &__avocado {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 17.8rem;
+    z-index: -1;
+  }
+  &__cucumber {
+    position: absolute;
+    top: 0;
+    left: 691px;
+    width: 8.4rem;
+    z-index: -1;
+  }
+  &__pepper {
+    position: absolute;
+    top: 400px;
+    left: 38px;
+    width: 8.6rem;
+    z-index: -1;
+  }
+  &__beans {
+    position: absolute;
+    bottom: 160px;
+    width: 10.5rem;
+    z-index: -1;
+  }
+}
+.title {
+  font-family: $font-cormorant;
+  font-weight: 700;
+  font-size: 8rem;
+  margin: 0;
+  line-height: 8rem;
+  &__span {
+    font-style: italic;
+  }
+  &_block {
+    .title__span {
+      display: block;
+    }
+  }
+}
+.description {
+  margin: 0;
+  line-height: 1.5;
+  &_size-s {
+    font-size: 1.8rem;
+  }
+  &_size-m {
+    font-size: 2.4rem;
+  }
+}
+.link {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.13rem;
+  padding: 2.5rem 4.5rem;
+  background-color: $orange;
+  box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
+  text-decoration: none;
+  border-radius: 3.8rem;
+  display: inline-block;
+}
+.offer {
+  background-image: url(../images/offer.png);
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 2.3rem;
+  padding-bottom: 12.8rem;
+  &__text {
+    margin-top: 6rem;
+    max-width: 700px;
+  }
+  &__slider {
+    overflow: hidden;
+    padding: 100px;
+  }
+}
+
+.swiper {
+  overflow: initial;
+  &-slide {
+    border: 1px solid $green;
+    border-radius: 2rem;
+    padding: 4rem 3.7rem;
+    box-sizing: border-box;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    &:hover {
+      box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+      .swiper-slide__hover {
+        height: 233px;
+        opacity: 1;
+      }
+      &::after {
+        content: "";
+        background-color: rgba($white, 0.55);
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 2rem;
+        z-index: -1;
+      }
+    }
+    &_milk {
+      background-image: url(../images/milk.png);
+    }
+    &_pasta {
+      background-image: url(../images/pasta.png);
+    }
+    &_steak {
+      background-image: url(../images/steak.png);
+    }
+    &__title {
+      font-family: $font-cormorant;
+      font-size: 3rem;
+      color: $green;
+      margin-bottom: 0;
+    }
+    &__hover {
+      height: 0;
+      opacity: 0;
+    }
+    &__text {
+      color: rgba($green, 0.7);
+      line-height: 1.5;
+      margin-top: 2.5rem;
+      margin-bottom: 3.4rem;
+      max-width: 263px;
+    }
+    &__link {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $green;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      letter-spacing: 0.1rem;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      &::before {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        background-image: url(../images/plus.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &-pagination {
+    display: none;
+  }
+  &-button-next,
+  &-button-prev {
+    top: -60px;
+    &:hover {
+      &::after {
+        color: $green;
+      }
+    }
+    &::after {
+      color: rgba($green, 0.4);
+      font-size: 20px;
+    }
+  }
+  &-button-next {
+    right: -8px;
+  }
+  &-button-prev {
+    left: initial;
+    right: 100px;
+  }
 }
